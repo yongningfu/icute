@@ -16,6 +16,7 @@ import {
 import Page from './routes/Page';
 import Page2 from './routes/Page2';
 import TabIcon from './components/TabIcon';
+import Home from './routes/Home'
 
 const getSceneStyle = (props, computedProps) => {
   const style = {
@@ -49,28 +50,32 @@ class RouterComponent extends React.Component {
           <Scene key="tabbar" tabs pressOpacity={0.8} type={ActionConst.REPLACE} >
             <Scene
               key="home"
-              component={Page}
+              component={Home}
               text="首页"
+              iconImage="home"
               icon={TabIcon}
             />
             <Scene
               key="shopping"
               component={Page2}
               title="购物"
+              iconImage="shopping"
               icon={TabIcon}
             />
             <Scene
               key="profile"
               component={Page}
+              iconImage="profile"
               title="关于"
               icon={TabIcon}
             />
-            <Scene
+            {/*<Scene
               key="apiTest"
               component={Page}
               title="icute"
+              iconImage="profile"
               icon={TabIcon}
-            />
+            />*/}
           </Scene>
         </Scene>
       </Router>
