@@ -1,0 +1,34 @@
+{
+  "parser"  : "babel-eslint",
+  "extends" : [
+    "airbnb"
+  ],
+  "plugins": [
+    "babel",
+    "import"
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "build/webpack.config.js"
+      }
+    }
+  },
+  "env"     : {
+    "browser" : true,
+  },
+  "globals" : {
+    "__DEV__"      : false,
+    "__PROD__"     : false,
+    "__DEBUG__"    : false,
+    "__COVERAGE__" : false,
+    "__BASENAME__" : false,
+    "__NETWORK__" : false,
+  },
+  "rules": {
+    "generator-star-spacing": 0,
+    "babel/generator-star-spacing": 1,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "linebreak-style": 0,
+  }
+}
