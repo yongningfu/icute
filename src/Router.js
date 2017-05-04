@@ -15,6 +15,7 @@ import Page from './routes/Page';
 import Page2 from './routes/Page2';
 import TabIcon from './components/TabIcon';
 import Home from './routes/Home';
+import ScrollTabViewPage from './routes/ScrollTabViewPage';
 
 const getSceneStyle = (props, computedProps) => {
   const style = {
@@ -61,8 +62,9 @@ function RouterComponent() {
             icon={TabIcon}
           />
           <Scene
+            hideNavBar
             key="shopping"
-            component={Page2}
+            component={ScrollTabViewPage}
             title="购物"
             iconImage="shopping"
             icon={TabIcon}
